@@ -381,6 +381,8 @@ body {
 }
 
 .sign-in {
+  max-width: 125px;
+  width: 100%;
   font-size: 12px;
   font-weight: 500;
   line-height: 20px;
@@ -393,6 +395,7 @@ body {
 }
 
 .sign-up {
+  width: 130px;
   font-size: 12px;
   font-weight: 500;
   line-height: 20px;
@@ -472,8 +475,7 @@ body {
 }
 
 .link-button {
-  max-width: 155px;
-  width: 100%;
+  width: 170px;
   font-size: 12px;
   font-weight: 500;
   color: #FFFFFF;
@@ -496,8 +498,7 @@ body {
 }
 
 .demo-link {
-  max-width: 155px;
-  width: 100%;
+  width: 170px;
   font-size: 12px;
   font-weight: 500;
   color: #F2994A;
@@ -847,7 +848,6 @@ body {
   color: #99EFD0;
   letter-spacing: 0.33px;
   text-align: center;
-  width: 60%;
   margin-bottom: 32px;
 }
 
@@ -1303,24 +1303,16 @@ body {
   color: #8476AA;
 }
 
+.no-webp .footer-wrapper {
+  background-image: url("../img/bulbs.png"); }
+
 .footer-wrapper {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 100px;
   position: relative;
   overflow-y: hidden;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.footer-wrapper-img {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 100%;
+  background-size: cover;
 }
 
 .footer {
@@ -1494,6 +1486,20 @@ body {
           align-items: center;
 }
 
+@media (max-width: 1000px) {
+  .group-3 {
+    padding-top: 100px;
+  }
+
+  .group-5 {
+    padding-bottom: 50px;
+  }
+
+  .group-7-description {
+    margin-top: 0;
+  }
+}
+
 @media (max-width: 818px) {
   .brend {
     width: 30%;
@@ -1527,6 +1533,7 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    width: 90%;
   }
 
   .details-about-start-links .link-button {
@@ -1579,17 +1586,6 @@ body {
 }
 
 @media (max-width: 525px) {
-  .details-about-start-links {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .details-about-start-links .link-button {
-    margin-bottom: 10px;
-  }
-
   .mobile-header-menu {
     display: block;
   }
@@ -1598,8 +1594,21 @@ body {
     display: none;
   }
 
-  .brend {
-    width: 100%;
+  .sign-in-or-sign-up {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .sign-up {
+    margin-top: 0;
+    margin-left: 10px;
+  }
+
+  .list-of-brends {
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
   .footer-columns-links {
@@ -1614,6 +1623,10 @@ body {
 
   .burger-submenu-wrapper {
     width: 200px;
+  }
+
+  .author-link:first-child {
+    min-width: 129px;
   }
 }
 
@@ -1636,6 +1649,20 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .details-about-start-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .details-about-start-links .link-button {
+    margin-bottom: 10px;
   }
 }
 
@@ -1674,8 +1701,8 @@ body {
             transform: translate(-50%, 0);
   }
 
-  .group-7 {
-    margin-top: 100px;
+  .group-7-wrapper {
+    margin-top: 250px;
   }
 
   .group-7-description {
@@ -1710,4 +1737,32 @@ body {
   .burger-submenu-wrapper {
     width: 180px;
   }
+
+  .sign-in-or-sign-up {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .sign-up {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .author-rights {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .author-link {
+    margin-bottom: 15px;
+  }
 }
+
+.webp .footer-wrapper { background-image: url(../img/bulbs.webp); }
